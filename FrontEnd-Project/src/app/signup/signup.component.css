@@ -1,0 +1,12 @@
+.align-center{
+  width: 30%;
+  padding: 15px;
+  margin: 20px;
+  align: 'center';
+  border-radius:10px;
+  position: absolute;
+  border:0.5px solid darkorchid;
+  /* background-color: cadetblue; */
+  margin-top: 5%;
+  margin-left: 35%;
+}
