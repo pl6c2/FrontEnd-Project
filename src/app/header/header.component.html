@@ -1,0 +1,25 @@
+<mat-toolbar color="accent">
+  <div class="home">
+    <a routerLink="/" ><mat-icon>home</mat-icon></a>
+  </div>
+  <div><a routerLink="/user">{{userName}}</a>  </div>
+  <span class="space"></span>
+  <ul>
+    <li *ngIf="userIsAuthenticated">
+      <a mat-button routerLink="/create" routerLinkActive="mat-accent">New Repository</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <input type="search" #searchValue>
+      <button mat-button routerLinkActive="mat-accent" (click)="searchModel(searchValue)" routerLink="/search"><mat-icon>search</mat-icon></button>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-button routerLink="/login" routerLinkActive="mat-accent">Login</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-button routerLink="/signup" routerLinkActive="mat-accent">Signup</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <button (click)="onLogout()" mat-button>Logout</button>
+    </li>
+  </ul>
+</mat-toolbar>
